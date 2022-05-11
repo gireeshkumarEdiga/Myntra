@@ -1,0 +1,103 @@
+#pic1 {
+    background-color: rgba(255,255,255,255);
+    /* border : 1px solid red; */
+    margin: 1% ;
+} 
+
+#pic2 {
+    display: flex;
+    flex-direction: row;
+    margin: 1% 0%;
+    /* border: 1px solid black; */
+}
+
+#pic2 > img {
+    width: 50%;
+} 
+
+#pic3 > img {
+    width: 100%;
+}
+
+#pic4 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    /* grid-template-columns: 50px; */
+    width: 100%;
+}
+
+#pic4 > div > img {
+    width: 100%;
+}
+
+#pic5 > img {
+    width: 100%;
+}
+
+#pic6 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+#pic6 > div > img {
+    width: 100%;
+}
+
+#pic7 > img {
+    width: 100%;
+}
+
+#pic8 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+#pic8 > div > img {
+    width: 100%;
+}
+
+#pic9 > img {
+    width: 100%;
+}
+
+#pic10 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 10px;
+}
+
+#pic10 > div > img {
+    width: 100%;
+}
+
+#pic11 > img {
+    width: 100%;
+}
+
+#pic12 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+/* #pic12 > div {
+    border: 1px solid black;
+} */
+
+#pic12 > div > img {
+     width: 100%;
+}
+
+#f1 {
+    display: flex;
+    flex-direction: row;
+}
+
+#f1 > #online {
+    display: flex;
+    flex-direction: column;
+}
+
+#f1 > #useful {
+    display: flex;
+    flex-direction: column;
+}
