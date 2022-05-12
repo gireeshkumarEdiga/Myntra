@@ -90,14 +90,88 @@
 #f1 {
     display: flex;
     flex-direction: row;
+    padding: 2% 10%;
+    width: 80%;
+    /* border: 1px solid black; */
+    background-color: rgba(250,251,252,255);
 }
 
 #f1 > #online {
     display: flex;
     flex-direction: column;
+    /* border: 1px solid red; */
+    width: 15%;
+    text-align: left;
 }
 
 #f1 > #useful {
     display: flex;
     flex-direction: column;
+    /* border: 1px solid red; */
+    width: 15%;
+    text-align: left;
+}
+
+#f1 > #experience {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    width: 35%;
+    text-align: left;
+}
+
+#f1 > #original {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    width: 35%;
+    text-align: left;
+}
+
+#guarantee, #return {
+    display: flex;
+    flex-direction: row;
+}
+
+#f2 {
+    background-color: rgba(250,251,252,255);
+    padding: 0% 10%;
+    text-align: left;
+}
+
+#f3 {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 2% 10%;
+    background-color: rgba(250,251,252,255);
+}
+
+#f3 > div {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+
+#f4 {
+    background-color: rgba(250,251,252,255);
+    padding: 0% 10%;
+    text-align: left;
+}
+
+
+#f5,#f6, #f7 {
+    background-color: rgba(250,251,252,255);
+    padding: 0% 10%;
+    text-align: left;
+}
+
+#f8, #f9 {
+    background-color: rgba(250,251,252,255);
+    padding: 0% 10%;
+    text-align: left;
+}
+
+#footer {
+    background-color: rgba(250,251,252,255);
 }
