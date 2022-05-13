@@ -1,9 +1,12 @@
 import React from "react";
+import axios from "axios";
+import { useEffect } from "react";
 import {useState} from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
 
 export const Login = () => {
+    const [matter, setMatter] = useState([]);
     const [data, setData] = useState({
         email:"",
         password:"",
@@ -11,13 +14,30 @@ export const Login = () => {
 
     const {email,password} = data;
 
+    useEffect(() => {
+        getData();
+    },[])
+
+    const getData = () => {
+        axios.get("http://localhost:3001/details")
+        .then((res) => setMatter(res.data));
+    }
+
     const handleChange = e => {
         setData({...data,[e.target.name]:e.target.value});
     }
 
     const handleSubmit = e => {
         e.preventDefault();
+        if(result.length>0){
+            window.location.href = "./";
+        }else{
+            alert("wrong credintials");
+        }
     }
+    
+    let result = matter.filter((user) => user.email === email && user.password === password);
+
 
     return (
         <div id="main">

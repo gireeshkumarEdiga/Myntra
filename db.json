@@ -1,0 +1,14 @@
+{
+  "details": [
+    {
+      "firstname": "Gireeshkumar",
+      "lastname": "Ediga",
+      "email": "egireeshkumar99@gmail.com",
+      "number": "123456",
+      "password": "12345",
+      "confirmPassword": "12345",
+      "status": false,
+      "id": 1
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 #main {
     background-color: rgba(255,238,233,255);
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 #img {
     margin: 5% 30% 5% 30%;
     padding: 3% 3%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 #img > img {
