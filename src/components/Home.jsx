@@ -4,12 +4,14 @@ import './Home.css';
 import data from "./json/data.json";
 import info from "./json/info.json";
 import matter from "./json/matter.json";
-import stuff from "./json/stuff.json"
+import stuff from "./json/stuff.json";
+// import  {SwipeableTextMobileStepper} from "./Carousel";
 
 console.log(data)
 export const Home = () => {
   return (
-    <div>
+    <div style={{paddingTop:"60px"}}>
+        {/* <SwipeableTextMobileStepper/> */}
         <div id="pic1">
             <img src={pic} alt="" />
         </div>
