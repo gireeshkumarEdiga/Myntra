@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useEffect } from "react";
-import {useState} from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,18 +22,21 @@ export const Login = () => {
     const {email,password} = data;
 
     useEffect(() => {
-        getData1();
+        getData();
     },[])
 
-    const getData1 = () => {
-        axios.get("http://localhost:3001/details")
-        .then((res) => setMatter(res));
-    }
+    // const getData1 = () => {
+    //     axios.get("http://localhost:3001/details")
+    //     .then((res) => setMatter(res));
+    // }
 
     const getData = () => {
         axios.get("http://localhost:3001/details")
+        .then((res) => setMatter(res.json()))
         .then((res) => dispatch(addTodo(res.data)));
     }
+
+    console.log(" +++ "+matter);
 
     const handleChange = e => {
         setData({...data,[e.target.name]:e.target.value});
@@ -44,13 +47,15 @@ export const Login = () => {
         e.preventDefault();
         if(result.length>0){
             window.location.href = "./";
-            getData();
+            // getData();
         }else{
             alert("wrong credintials");
         }
     }
     
     let result = matter.filter((user) => user.email === email && user.password === password);
+    console.log("Result "+result);
+    console.log("Matter "+matter);
 
 
     return (

@@ -1,24 +1,34 @@
 {
   "details": [
     {
-      "firstname": "Gireeshkumar",
-      "lastname": "Ediga",
-      "email": "egireeshkumar99@gmail.com",
-      "number": "1234567",
+      "firstname": "lacchhmmi",
+      "lastname": "pacha",
+      "email": "pacha@gmail.com",
+      "number": "12345",
       "password": "12345",
       "confirmPassword": "12345",
       "status": false,
       "id": 1
     },
     {
-      "firstname": "lacchhmmi",
+      "firstname": "lucky",
       "lastname": "pacha",
-      "email": "egireeshkumar@gmail.com",
-      "number": "12345678",
-      "password": "123",
-      "confirmPassword": "123",
+      "email": "lucky@gmail.com",
+      "number": "09876",
+      "password": "1",
+      "confirmPassword": "1",
       "status": false,
       "id": 2
+    },
+    {
+      "firstname": "Gireeshkumar",
+      "lastname": "Ediga",
+      "email": "egireeshkumar99@gmail.com",
+      "number": "143143",
+      "password": "12345",
+      "confirmPassword": "12345",
+      "status": false,
+      "id": 3
     }
   ]
 }
