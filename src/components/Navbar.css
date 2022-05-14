@@ -5,7 +5,9 @@ body {
   
   .navbar {
     overflow: hidden;
-    background-color: white; 
+    background-color: white;
+    /* border: 1px solid green;  */
+
   }
   
   .navbar a {
@@ -29,7 +31,7 @@ body {
   .subnav {
     float: left;
     overflow: hidden;
-    /* border: 1px solid black; */
+    /* border: 1px solid yellow; */
   }
   
   .subnav .subnavbtn {
@@ -37,10 +39,9 @@ body {
     border: none;
     outline: none;
     color: black;
-    padding: 38px 16px 14px 16px;
+    padding: 38px 10px 14px 10px;
     background-color: inherit;
     font-family: inherit;
-    margin: 0;
   }
   
   .navbar a:hover, .subnav:hover .subnavbtn {
@@ -97,7 +98,6 @@ body {
 
   .in {
       margin-top: 20px;
-      margin-left: 40px;
       /* border: 1px solid red; */
       width: 20%;
       display: flex;
@@ -112,7 +112,7 @@ body {
 
   .dropbtn {
     color: black;
-    padding: 16px;
+    padding: 16px 16px;
     font-size: 16px;
     border: none;
   }

@@ -10,7 +10,7 @@ import stuff from "./json/stuff.json";
 console.log(data)
 export const Home = () => {
   return (
-    <div style={{paddingTop:"60px"}}>
+    <div style={{paddingTop:"6%"}}>
         {/* <SwipeableTextMobileStepper/> */}
         <div id="pic1">
             <img src={pic} alt="" />

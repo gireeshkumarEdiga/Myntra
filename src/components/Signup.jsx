@@ -2,10 +2,17 @@ import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 import {useState} from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { addTodo } from "../redux/action";
 import "./Signup.css";
 
 export const Signup = () => {
+    const dispatch = useDispatch();
+
+    const manju = useSelector(store => store.todo);
+    console.log(" SignUp "+manju);
+
     const [data, setData] = useState({
         firstname:"",
         lastname:"",
@@ -19,11 +26,16 @@ export const Signup = () => {
     const {firstname,lastname,email,number,password,confirmPassword} = data;
 
     useEffect(() => {
-        postData();
+        // console.log("Last", manju)
+        getTodo();
     },[])
 
     const handleChange = e => {
         setData({...data,[e.target.name]:e.target.value});
+    }
+
+    const getTodo = () => {
+        axios.get("http://localhost:3001/details").then((res) => { dispatch(addTodo(res.data)) }).then(() => {console.log("Posted")})
     }
 
     const handleSubmit = e => {
@@ -31,16 +43,16 @@ export const Signup = () => {
         if(password !== confirmPassword){
             alert("password doesn't match");
         }else{
+            // axios.post("http://localhost:3001/details",data).then(() => getTodo())
             console.log(data);
             window.location.href="/login";
+            postData();
         }
-        postData()
-
     }
 
     const postData = () => {
         console.log("Data : ", data)
-        axios.post("http://localhost:3001/details",data);
+        axios.post("http://localhost:3001/details",data).then(() => getTodo())
     }
 
     return (
