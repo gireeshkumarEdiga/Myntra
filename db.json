@@ -29,6 +29,16 @@
       "confirmPassword": "12345",
       "status": false,
       "id": 3
+    },
+    {
+      "firstname": "Gireeshkumar",
+      "lastname": "Ediga",
+      "email": "edigagireeshkumar@gmail.com",
+      "number": "12345",
+      "password": "123",
+      "confirmPassword": "123",
+      "status": false,
+      "id": 4
     }
   ]
 }

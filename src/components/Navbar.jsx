@@ -419,7 +419,7 @@ export const Navbar = () => {
                                 <a href="#careers">Forest Essentials</a>
                             </div>
                             <div>
-                                <a href="#company" style={{color:"red"}}>Fashion Accessories</a>
+                                <a href="#company" style={{color:"#0db7af"}}>Fashion Accessories</a>
                                 <a href="#team">Wallets</a>
                                 <a href="#careers">Belts</a>
                                 <a href="#company">Perfumes & Body Mists</a>
@@ -432,8 +432,8 @@ export const Navbar = () => {
                                 <a href="#careers">Phone Cases</a>
                                 <a href="#company">Rings & Wristwear</a>
                                 <a href="#team">Helmets</a>
-                                <a href="#company" style={{color:"red"}}>Bags & Backpacks</a>
-                                <a href="#company" style={{color:"red"}}>Luggages & Trollers</a>
+                                <a href="#company" style={{color:"#0db7af"}}>Bags & Backpacks</a>
+                                <a href="#company" style={{color:"#0db7af"}}>Luggages & Trollers</a>
                             </div>
                         </div>
                     </div>
