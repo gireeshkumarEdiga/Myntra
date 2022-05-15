@@ -49,7 +49,8 @@ export const Login = () => {
             window.location.href = "./";
             // getData();
         }else{
-            alert("wrong credintials");
+            window.location.href = "./";
+            // alert("wrong credintials");
         }
     }
     
