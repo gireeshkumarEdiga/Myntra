@@ -1,23 +1,39 @@
 import "./Products.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { addProduct } from "../redux/reduxProducts/action";
+import {addCart} from '../redux/reduxCart/action';
+
 
 
 export const Products = () => {
     const [product, setProduct] = useState([]);
     const [page, setPage] = useState(1);
-    const [search, setSearch] = useState("")
+    const [search, setSearch] = useState("");
+
+    const p = useSelector(store => store.prod);
+
+    console.log(" hi "+p);
+
+    const dispatch = useDispatch();
 
     useEffect(() => {
         getData()
-    },[page])
+    },[page]);
 
+        const handleClickCart = (e) => {
+           dispatch(addCart(e))
+        }
+    
 
     const getData = async () => {
-        let res = await fetch(`https://go-comet-backend.herokuapp.com/product?page=${page}&size=20`);
+        let res = await fetch(`https://go-comet-backend.herokuapp.com/product?page=${page}&size=20`)
+        // .then((res) => dispatch(addProduct(res.data)));
         let data = await res.json();
-        console.log(data.product);
-        setProduct(data.product)
+        // console.log(data.product);
+        setProduct(data.product);
+        dispatch(addProduct(data));
     }
 
 
@@ -227,6 +243,7 @@ export const Products = () => {
                                 <p style={{fontSize:"15px",fontWeight:"700"}}>{e.brand}</p>
                                 <p style={{lineHeight: "1%",color:"#323136",fontSize:"15px"}}>{e.category}</p>
                                 <div style={{ display: 'flex' }}><p style={{ fontSize: "15px", fontWeight: "700" }}>{"Rs. " + e.price}</p><p style={{ marginLeft: "2%", textDecoration: "line-through", fontSize: "13px" }}>{"Rs." + e.off_price}</p><p style={{ marginLeft: "4%", fontSize: "13px", color: "#FF905A" }}>({e.discount} %OFF)</p></div>
+                                <button onClick={handleClickCart}>ADD to Cart</button>
                             </div>
                         ))
                     }

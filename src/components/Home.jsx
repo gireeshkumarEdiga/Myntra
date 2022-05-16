@@ -7,7 +7,7 @@ import matter from "./json/matter.json";
 import stuff from "./json/stuff.json";
 // import  {SwipeableTextMobileStepper} from "./Carousel";
 
-console.log(data)
+// console.log(data)
 export const Home = () => {
   return (
     <div style={{paddingTop:"6%"}}>

@@ -442,6 +442,9 @@ export const Navbar = () => {
                     {/* <button className="subnavbtn"><b>STUDIO</b><i className="fa fa-caret-down"></i></button> */}
                      <Link to="/products" class="subnavbtn"><b>PRODUCTS</b><i class="fa fa-caret-down"></i></Link>
                 </div>
+                <div className="subnav">
+                     <Link to="/cart" class="subnavbtn"><b>CART</b><i class="fa fa-caret-down"></i></Link>
+                </div>
             </div>
             <div className="in" >
                 <input type="text" placeholder="Search for product, brands and more"/>
@@ -453,7 +456,7 @@ export const Navbar = () => {
                     <div className="dropdown-content">
                         <a href="#">
                             <b style={{paddingTop:"20px"}}>welocme</b>
-                            <p style={{fontSize:"15px"}}>To access accound and manage orders</p>
+                            {/* <p style={{fontSize:"15px"}}>To access accound and manage orders</p> */}
                         </a>    
                             {/* <button>LOGIN/SIGNUP</button> */}
                             <Link className="login" to="/login">LOGIN/SIGNUP</Link>

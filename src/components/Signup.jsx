@@ -4,14 +4,14 @@ import { useEffect } from "react";
 import {useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { addTodo } from "../redux/action";
+import { addTodo } from "../redux/reduxSignup/action";
 import "./Signup.css";
 
 export const Signup = () => {
     const dispatch = useDispatch();
 
-    const manju = useSelector(store => store.todo);
-    console.log(" SignUp "+manju);
+    const m = useSelector(store => store.todo);
+    console.log(" SignUp "+m);
 
     const [data, setData] = useState({
         firstname:"",
@@ -44,15 +44,15 @@ export const Signup = () => {
             alert("password doesn't match");
         }else{
             // axios.post("http://localhost:3001/details",data).then(() => getTodo())
-            console.log(data);
+            //console.log(data);
             window.location.href="/login";
             postData();
         }
     }
 
     const postData = () => {
-        console.log("Data : ", data)
-        axios.post("http://localhost:3001/details",data).then(() => getTodo())
+        axios.post("http://localhost:3001/details",data)
+        .then(() => getTodo())
     }
 
     return (
