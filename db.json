@@ -50,5 +50,112 @@
       "status": false,
       "id": 5
     }
+  ],
+  "productdetails": [
+    {
+      "_id": "6256e1e0833bb6d1daf33e8f",
+      "title": "Men Black Regular Fit Joggers",
+      "price": 1299,
+      "gender": "Men",
+      "ageGroup": "Men",
+      "description": "Joggers in sweatshirt fabric made from a cotton blend. Covered elastication and a drawstring at the waist, pockets in the side seams and ribbed hems. ",
+      "category": "H&M Track Pants",
+      "brand": "H&M",
+      "color": "Black",
+      "sizes": [
+        "XS,S,M,L,XL"
+      ],
+      "discount": "10",
+      "off_price": 1349,
+      "images": [
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15193456/2021/8/19/22b36569-e5e4-4081-b8a6-c0c444278dbf1629346827509RegularFitJoggers1.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15193456/2021/8/19/3eb71ba3-6290-4ec3-831a-0360ac55f1da1629346827269RegularFitJoggers2.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15193456/2021/8/19/64b5cfe0-af25-4606-8d39-1c1b0adca0e31629346827014RegularFitJoggers3.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15193456/2021/8/19/e08a685d-204a-42ed-91be-0845711a87921629346827139RegularFitJoggers4.jpg"
+      ],
+      "ratings": 4.4,
+      "count": 480,
+      "id": 2
+    },
+    {
+      "_id": "6256e1e0833bb6d1daf33e96",
+      "title": "Men White Relaxed Fit Hoodie",
+      "price": 1499,
+      "gender": "Men",
+      "ageGroup": "Men",
+      "description": "Hoodie in sweatshirt fabric made from a cotton blend. Relaxed fit with a lined, drawstring hood, long sleeves, kangaroo pocket and ribbing at the cuffs and hem.",
+      "category": "H&M Sweatshirts",
+      "brand": "H&M",
+      "color": "White",
+      "sizes": [
+        "XS,S,M,L,XL,XXL"
+      ],
+      "discount": "0",
+      "off_price": 0,
+      "images": [
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15193768/2021/8/19/05c42f23-3496-4e9c-81ee-da79625df59f1629352600995RelaxedFitHoodie1.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15193768/2021/8/19/50dcfb48-0697-4f54-b7c8-21ce6a9c5c2b1629352600517RelaxedFitHoodie2.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15193768/2021/8/19/d1406dad-11c6-4609-828a-58cab2c013e41629352600497RelaxedFitHoodie3.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15193768/2021/8/19/a55a77f0-a7e2-4fd3-8266-449130e8f1511629352600508RelaxedFitHoodie4.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15193768/2021/8/19/33017409-8902-458e-9931-04af5db5eefa1629352600726RelaxedFitHoodie5.jpg"
+      ],
+      "ratings": 4.4,
+      "count": 317,
+      "id": 5
+    },
+    {
+      "_id": "6256e1e0833bb6d1daf33e95",
+      "title": "Men Black Regular Fit Faux Shearling Jacket",
+      "price": 2299,
+      "gender": "Men",
+      "ageGroup": "Men",
+      "description": "Jacket in soft faux shearling with a stand-up collar, zip down the front and welt front pockets. Partly lined in jersey.",
+      "category": "H&M Jackets",
+      "brand": "H&M",
+      "color": "Black",
+      "sizes": [
+        "XS,S,M,L,XL"
+      ],
+      "discount": "0",
+      "off_price": 0,
+      "images": [
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/16057308/2021/11/11/98a1fbc7-981c-4b80-b5ec-28f500d657c81636609961369RegularFitFauxshearlingjacket1.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/16057308/2021/11/11/806aeb41-7079-49e0-8d0e-2506dc43c97b1636609961650RegularFitFauxshearlingjacket2.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/16057308/2021/11/11/e971d3cb-8237-4d04-a7bc-c4ac4ef0b6001636609961458RegularFitFauxshearlingjacket3.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/16057308/2021/11/11/fb811970-8fbd-4e69-9c86-743da137c40c1636609961556RegularFitFauxshearlingjacket4.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/16057308/2021/11/11/3b633ee4-a1b7-40d0-9dd5-7d43c48b95581636609961241RegularFitFauxshearlingjacket5.jpg"
+      ],
+      "ratings": 3.6,
+      "count": 30,
+      "id": 6
+    },
+    {
+      "_id": "6256e1e0833bb6d1daf33e9a",
+      "title": "Boys 2-Pack Cotton Jersey Tops",
+      "price": 629,
+      "gender": "Boys",
+      "ageGroup": "Boys",
+      "description": "Long-sleeved tops in soft cotton jersey with a press-stud on one shoulder (except in sizes 2-4Y) and ribbing around the neckline. ",
+      "category": "H&M Bodysuit  ",
+      "brand": "H&M",
+      "color": "Blue",
+      "sizes": [
+        "6M",
+        "6-9M",
+        "9-12M",
+        "12-15M"
+      ],
+      "discount": "10",
+      "off_price": 699,
+      "images": [
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15933148/2021/10/30/d3c8e5d4-8a9b-4a55-b018-9cbb3d4948b61635578805911HMBoys2-PackCottonJerseyTops1.jpg",
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15933148/2021/10/30/26d2990a-f2ee-409d-81ac-a9987618e0431635578805919HMBoys2-PackCottonJerseyTops2.jpg",
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15933148/2021/10/30/26d2990a-f2ee-409d-81ac-a9987618e0431635578805919HMBoys2-PackCottonJerseyTops2.jpg",
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15933148/2021/10/30/26d2990a-f2ee-409d-81ac-a9987618e0431635578805919HMBoys2-PackCottonJerseyTops2.jpg"
+      ],
+      "ratings": 4.6,
+      "count": 46,
+      "id": 7
+    }
   ]
 }

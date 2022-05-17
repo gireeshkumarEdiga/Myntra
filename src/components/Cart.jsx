@@ -10,20 +10,33 @@ import { useSelector } from 'react-redux';
 import ClearIcon from '@mui/icons-material/Clear';
 import {removeCart} from '../redux/reduxCart/action';
 import {useDispatch} from 'react-redux';
+import { useEffect } from "react";
+import axios from "axios";
 
 export const Cart = () => {
+    const [cart, setCart] = useState([]);
 
     const dispatch = useDispatch();
 
     const [showMenu,setShowMenu] = useState(false)
 
+    useEffect(() => {
+        postData();
+    },[])
 
+    const postData = () => {
+        axios.get("https://myntra123.herokuapp.com/productdetails")
+        .then((res) => setCart(res.data));
+    }
 
     const dataMatter = useSelector((state) => state.cart.cart);
     console.log(" data "+dataMatter);
 
     const remove = (id) => {
-		console.log(id.id)
+        axios.delete(`https://myntra123.herokuapp.com/productdetails/${id}`)
+        // .then((res) => setCart(res.data))
+        .then(() => postData());
+		console.log(id)
 		dispatch(removeCart(id))	
 	}
 
@@ -40,6 +53,7 @@ export const Cart = () => {
     function handleClickSignUp() {
 		navigate('/signup')
 	}
+
 
     // const data = useSelector((state) => state.Cart.cart)
 
@@ -137,7 +151,7 @@ export const Cart = () => {
 
         <div className="rightDiv">
                             {
-                                dataMatter.map((e) => (
+                                cart.map((e) => (
                                     <div className="mainBox" key={e._id}>
                                         <img className="prodImg" src={e.images} alt="" />
                                         <p style={{fontSize:"15px",fontWeight:"700"}}>{e.brand}</p>

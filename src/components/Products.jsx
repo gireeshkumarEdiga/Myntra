@@ -1,4 +1,5 @@
 import "./Products.css";
+import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -23,7 +24,8 @@ export const Products = () => {
     },[page]);
 
         const handleClickCart = (e) => {
-           dispatch(addCart(e))
+           dispatch(addCart(e));
+           axios.post("https://myntra123.herokuapp.com/productdetails",e);
         }
     
 
@@ -243,7 +245,7 @@ export const Products = () => {
                                 <p style={{fontSize:"15px",fontWeight:"700"}}>{e.brand}</p>
                                 <p style={{lineHeight: "1%",color:"#323136",fontSize:"15px"}}>{e.category}</p>
                                 <div style={{ display: 'flex' }}><p style={{ fontSize: "15px", fontWeight: "700" }}>{"Rs. " + e.price}</p><p style={{ marginLeft: "2%", textDecoration: "line-through", fontSize: "13px" }}>{"Rs." + e.off_price}</p><p style={{ marginLeft: "4%", fontSize: "13px", color: "#FF905A" }}>({e.discount} %OFF)</p></div>
-                                <button onClick={handleClickCart}>ADD to Cart</button>
+                                <button onClick={() => handleClickCart(e)}>ADD to Cart</button>
                             </div>
                         ))
                     }
