@@ -31,7 +31,7 @@ export const Login = () => {
     // }
 
     const getData = () => {
-        axios.get("http://localhost:3001/details")
+        axios.get("https://myntra123.herokuapp.com/details")
         .then((res) => setMatter(res.json()))
         .then((res) => dispatch(addTodo(res.data)));
     }

@@ -35,7 +35,7 @@ export const Signup = () => {
     }
 
     const getTodo = () => {
-        axios.get("http://localhost:3001/details").then((res) => { dispatch(addTodo(res.data)) }).then(() => {console.log("Posted")})
+        axios.get("https://myntra123.herokuapp.com/details").then((res) => { dispatch(addTodo(res.data)) }).then(() => {console.log("Posted")})
     }
 
     const handleSubmit = e => {
@@ -51,7 +51,7 @@ export const Signup = () => {
     }
 
     const postData = () => {
-        axios.post("http://localhost:3001/details",data)
+        axios.post("https://myntra123.herokuapp.com/details",data)
         .then(() => getTodo())
     }
 
