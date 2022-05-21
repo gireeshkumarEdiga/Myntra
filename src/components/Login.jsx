@@ -5,10 +5,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo } from "../redux/reduxSignup/action";
+import { addUsers } from "../redux/reduxSignup/action";
 
 export const Login = () => {
-    const [matter, setMatter] = useState([]);
+    // const [matter, setMatter] = useState([]);
     const [data, setData] = useState({
         email:"",
         password:"",
@@ -16,8 +16,8 @@ export const Login = () => {
 
     const dispatch = useDispatch();
 
-    const girish = useSelector(store => store.todo );
-    console.log(" Login "+girish);
+    const matter = useSelector((store) => store.signup.users);
+    console.log(" Login girish ", matter);
 
     const {email,password} = data;
 
@@ -30,13 +30,13 @@ export const Login = () => {
     //     .then((res) => setMatter(res));
     // }
 
-    const getData = () => {
-        axios.get("https://myntra123.herokuapp.com/details")
-        .then((res) => setMatter(res.data))
-        .then((res) => dispatch(addTodo(res.data)));
-    }
+    // https://myntra123.herokuapp.com/details
 
-    console.log(" +++ "+matter);
+    const getData = () => {
+        axios.get("https://myntra-api-backend.herokuapp.com/users")
+        // .then((res) => setMatter(res.data))
+        .then((res) => dispatch(addUsers(res.data)));
+    }
 
     const handleChange = e => {
         setData({...data,[e.target.name]:e.target.value});
@@ -56,7 +56,6 @@ export const Login = () => {
     
     let result = matter.filter((user) => user.email === email && user.password === password);
     console.log("Result "+result);
-    console.log("Matter "+matter);
 
 
     return (

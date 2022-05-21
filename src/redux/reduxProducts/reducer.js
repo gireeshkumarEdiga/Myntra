@@ -2,7 +2,7 @@ import { ADD_PRODUCT} from "../reduxProducts/action";
 
 
 const initialstate = {
-    prod : [],
+    products : [],
 }
 
 export const reducerProducts = (store=initialstate,{type,payload}) => {
@@ -10,7 +10,7 @@ export const reducerProducts = (store=initialstate,{type,payload}) => {
         case ADD_PRODUCT:
             return {
                 ...store,
-                prod:[...store.prod,payload]
+                products:[...payload]
             }    
         default :
             return store    

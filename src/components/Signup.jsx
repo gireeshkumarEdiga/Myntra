@@ -4,14 +4,14 @@ import { useEffect } from "react";
 import {useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { addTodo } from "../redux/reduxSignup/action";
+import { addUsers } from "../redux/reduxSignup/action";
 import "./Signup.css";
 
 export const Signup = () => {
     const dispatch = useDispatch();
 
-    const m = useSelector(store => store.todo);
-    console.log(" SignUp "+m);
+    const m = useSelector((store) => store.signup.users);
+    console.log(" SignUp ", m);
 
     const [data, setData] = useState({
         firstname:"",
@@ -34,8 +34,12 @@ export const Signup = () => {
         setData({...data,[e.target.name]:e.target.value});
     }
 
+    // https://myntra123.herokuapp.com/details
+
     const getTodo = () => {
-        axios.get("https://myntra123.herokuapp.com/details").then((res) => { dispatch(addTodo(res.data)) }).then(() => {console.log("Posted")})
+        axios.get("https://myntra-api-backend.herokuapp.com/users")
+        .then((res) => { dispatch(addUsers(res.data)) })
+        .then(() => {console.log("Posted")})
     }
 
     const handleSubmit = e => {
@@ -51,7 +55,7 @@ export const Signup = () => {
     }
 
     const postData = () => {
-        axios.post("https://myntra123.herokuapp.com/details",data)
+        axios.post("https://myntra-api-backend.herokuapp.com/users",data)
         .then(() => getTodo())
     }
 

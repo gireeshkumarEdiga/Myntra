@@ -5,9 +5,7 @@ import { REMOVECART} from './action'
 
 
 const INITIAL_STATE = {
-	products:[],
 	cart:[],
-	currentItem:null
 }
 
 

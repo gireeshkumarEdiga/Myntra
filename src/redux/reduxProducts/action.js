@@ -1,7 +1,7 @@
 export const ADD_PRODUCT = "ADD_PRODUCT";
 
 
-export const addProduct = (prod) => ({
+export const addProduct = (product) => ({
     type: ADD_PRODUCT,
-    payload : prod
+    payload : product
 })

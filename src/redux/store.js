@@ -1,4 +1,4 @@
-import { compose, createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
 import { reducerSignup } from "./reduxSignup/reducer";
 import { reducerProducts } from "./reduxProducts/reducer";
 import { combineReducers } from "redux";
@@ -11,10 +11,16 @@ const rootReducer = combineReducers({
     cart : reducerCart,
 })
 
+const loggerMiddleware = (store) => (next) => (action) => {
+    console.time("hii");
+    next(action);
+    console.timeEnd("hii");
+}
+
 
 export const store = createStore (
     rootReducer,
-    composeWithDevTools(),
+    applyMiddleware(loggerMiddleware)
     // window._REDUX_DEVTOOLS_EXTENSION_ && window._REDUX_DEVTOOLS_EXTENSION_()
 )
 

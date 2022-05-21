@@ -1,18 +1,20 @@
-import { ADD_TODO } from "./action";
+import { ADD_USER } from "./action";
 
 
 const initialstate = {
-    todo : [],
+    users : [],
 }
 
 export const reducerSignup = (store=initialstate,{type,payload}) => {
     switch(type) {
-        case ADD_TODO:
+        case ADD_USER:
             return {
                 ...store,
-                todo:[...store.todo,payload]
+                users:[...payload]
             }   
         default :
             return store    
     }
 }
+
+

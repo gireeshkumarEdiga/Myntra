@@ -1,7 +1,7 @@
-export const ADD_TODO = "ADD_TODO";
+export const ADD_USER = "ADD_USER";
 
 
-export const addTodo = (todo) => ({
-    type: ADD_TODO,
-    payload : todo
+export const addUsers = (user) => ({
+    type: ADD_USER,
+    payload : user
 });
