@@ -43,7 +43,7 @@ export const Products = () => {
         // // setProduct(data);
         // dispatch(addProduct(data));
 
-        axios.get(`https://myntra-api-backend.herokuapp.com/products`)
+        axios.get(`https://server-swiggy.herokuapp.com/restaurants/`)
         .then((res) => dispatch(addProduct(res.data)));
 
     }
@@ -157,7 +157,7 @@ export const Products = () => {
         <div className="mainDiv">
             <div style={{marginLeft:"2%",lineHeight:"30%"}}>
                 <p style={{fontSize:"18px"}}>Home</p>
-                <p style={{ fontSize: "18px", fontWeight: "700" }}>Myntra Fashion Store<span style={{ color: "grey", fontWeight: "400" }}>-1245 items</span></p>
+                <p style={{ fontSize: "18px", fontWeight: "700" }}>Swiggy Food Store<span style={{ color: "grey", fontWeight: "400" }}>-1245 items</span></p>
                 <div style={{display: "flex"}}>
                     <p className="filters">FILTERS</p>
                     <select className="selectBtn" onChange={sorting}>
@@ -177,7 +177,7 @@ export const Products = () => {
             <hr/>
             <div className="prodctDiv">
                 <div className="leftDiv">
-                    <div className="checkDiv">
+                    {/* <div className="checkDiv">
                          <input type="checkbox" onChange={handleCheckedMen} /><label>Men</label>
                         <br/>
                         <input type="checkbox" onChange={handleCheckedWomen}  /><label>Women</label>
@@ -185,7 +185,7 @@ export const Products = () => {
                         <input type="checkbox" onChange={handleCheckedKids} /><label>Boys</label>
                         <br/>
                         <input type="checkbox" onChange={handleCheckedGirls}/><label>Girls</label>
-                   </div>
+                   </div> */}
                     <hr />
                     <div className="checkDiv1">
                         <h4>PRICE</h4>
@@ -218,7 +218,7 @@ export const Products = () => {
                          <br/>
                         <input type="checkbox"/><label>OneX</label>
                     </div>
-                    <hr/>
+                    {/* <hr/>
                       <div className="checkDiv1">
                         <h5>DISCOUNT RANGE</h5>
                          <input type="checkbox" /><label>10% and above</label>
@@ -238,7 +238,7 @@ export const Products = () => {
                         <input type="checkbox" /><label>80% and above</label>
                         <br/>
                         <input type="checkbox" /><label>90% and above</label>
-                   </div>
+                   </div> */}
                    
                 </div>
                 <div className="rightDiv">
@@ -251,10 +251,10 @@ export const Products = () => {
                                 }
                         }).map((e) => (
                             <div className="mainBox" key={e._id}>
-                                <img className="prodImg" src={e.images} alt="" />
-                                <p style={{fontSize:"15px",fontWeight:"700"}}>{e.brand}</p>
-                                <p style={{lineHeight: "1%",color:"#323136",fontSize:"15px"}}>{e.category}</p>
-                                <div style={{ display: 'flex' }}><p style={{ fontSize: "15px", fontWeight: "700" }}>{"Rs. " + e.price}</p><p style={{ marginLeft: "2%", textDecoration: "line-through", fontSize: "13px" }}>{"Rs." + e.off_price}</p><p style={{ marginLeft: "4%", fontSize: "13px", color: "#FF905A" }}>({e.discount} %OFF)</p></div>
+                                <img className="prodImg" src={e.image_url} alt="" />
+                                <p style={{fontSize:"15px",fontWeight:"700"}}>{e.title}</p>
+                                <p style={{lineHeight: "1%",color:"#323136",fontSize:"15px"}}>{e.categories}</p>
+                                <div style={{ display: 'flex' }}><p style={{ fontSize: "15px", fontWeight: "700" }}>{"Rs. " + e.price}</p><p style={{ marginLeft: "2%", textDecoration: "line-through", fontSize: "13px" }}></p><p style={{ marginLeft: "4%", fontSize: "13px", color: "#FF905A" }}>({e.offer} %OFF)</p></div>
                                 <button onClick={() => dispatch(addCart(e))}>ADD to Cart</button>
                             </div>
                         ))

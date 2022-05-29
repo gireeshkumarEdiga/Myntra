@@ -62,10 +62,10 @@ export const Cart = () => {
                                 {
                                     cartData.map((e) => (
                                         <div className="mainBox" key={e.id._id}>
-                                            <img className="prodImg" src={e.id.images} alt="" />
-                                            <p style={{fontSize:"15px",fontWeight:"700"}}>{e.id.brand}</p>
-                                            <p style={{lineHeight: "1%",color:"#323136",fontSize:"15px"}}>{e.id.category}</p>
-                                            <div style={{ display: 'flex' }}><p style={{ fontSize: "15px", fontWeight: "700" }}>{"Rs. " + e.id.price}</p><p style={{ marginLeft: "2%", textDecoration: "line-through", fontSize: "13px" }}>{"Rs." + e.off_price}</p><p style={{ marginLeft: "4%", fontSize: "13px", color: "#FF905A" }}>({e.id.discount} %OFF)</p></div>
+                                            <img className="prodImg" src={e.id.image_url} alt="" />
+                                            <p style={{fontSize:"15px",fontWeight:"700"}}>{e.id.title}</p>
+                                            <p style={{lineHeight: "1%",color:"#323136",fontSize:"15px"}}>{e.id.categories}</p>
+                                            <div style={{ display: 'flex' }}><p style={{ fontSize: "15px", fontWeight: "700" }}>{"Rs. " + e.id.price}</p><p style={{ marginLeft: "2%", textDecoration: "line-through", fontSize: "13px" }}></p><p style={{ marginLeft: "4%", fontSize: "13px", color: "#FF905A" }}>({e.id.offer} %OFF)</p></div>
                                             <button className="bg-black text-white p-1 rounded-xl mt-3 " onClick={() => dispatch(removeCart(e.id))}>Remove</button>
                                         </div>
                                     ))
